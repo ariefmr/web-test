@@ -9,12 +9,12 @@
   </head>
   <style>
     nav {
-      background: #FFF;
+      background-color: #2D2D2F;
     }
     .content {
       width: 100%;
       height: auto;
-      color: #000;
+      color: #fff;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -23,7 +23,7 @@
     h1 {
       font-family: 'Arial', sans-serif;
       font-size: 22px;
-      color: #000;
+      color: #fff;
       text-transform: uppercase;
       font-weight: 600;
       margin-top: 0px;
@@ -31,7 +31,7 @@
     h2 {
       font-family: 'Arial', sans-serif;
       font-size: 16px;
-      color: #000;
+      color: #fff;
       margin-top: 5px;
     }
     /* Base layout cleanup */
@@ -44,9 +44,10 @@
       gap: 16px;
     }
     .logo {
-      padding: 20px 50px;
+      height: 100px;
+      padding: 15px 50px;
       max-width: 100%;
-      max-height: 38.5px;
+      max-height: 70px;
     }
 
     /* Iframe defaults; JS will resize when possible */
@@ -60,7 +61,7 @@
     @media (max-width: 1024px) {
       .logo {
         padding: 12px 24px;
-        max-height: 38.5px;
+        max-height: 70px;
       }
       h1 { font-size: 20px; }
       h2 { font-size: 15px; }
@@ -75,7 +76,7 @@
       }
       .logo {
         padding: 10px 15px;
-        max-height: 38.5px;
+        max-height: 50px;
       }
       
       h1 { font-size: 14px; }
@@ -96,24 +97,24 @@
     <header>
       <div>
         <nav class="navbar">
-          <img src="https://pfe-assets.s3.ap-southeast-1.amazonaws.com/logo/eClinic.png" class="logo" />
+          <img src="https://proofeasyio.s3.amazonaws.com/verification_website/IMG_1762316001_StickerTru (2).jpg" class="logo" />
           <div class="content">
           <!-- Title & Sub Title-->
-          <!-- <h1 style="margin:0;">eClinic</h1> -->
-          <!-- <h2 style="margin:0;">eClinic is your online doctor</h2> -->
+          <!-- <h1 style="margin:0;">Soft Computing Research Society</h1>
+          <h2 style="margin:0;">Registered under the societies registration act XXI of 1860</h2> -->
           </div>
         </nav>
       </div>
     </header>
     <!-- MIDDLE CONTENT -->  
-    <iframe id="iframeCode" class="doc-frame" src="https://app-v2.proofeasy.io/final_doc/944ea690-8aa3-4b24-981c-926684fadb94.pdf?type=iframe" scrolling="no" allow="clipboard-write"></iframe>
+    <iframe id="iframeCode" class="doc-frame" src="https://app.proofeasy.io/final_doc/944ea690-8aa3-4b24-981c-926684fadb94.pdf?type=iframe" scrolling="no" allow="clipboard-write"></iframe>
     <script>
       const iframe = document.getElementById("iframeCode");
       let resizedByMessage = false;
       // Listen event message from iframe
       window.addEventListener("message", function(event) {
         // For security, filter message origin
-        if (event.origin !== "https://app-v2.proofeasy.io") return;
+        if (event.origin !== "https://app.proofeasy.io") return;
 
         if (event.data.iframeHeight) {
           console.log('height from content of iframe', event.data.iframeHeight);
@@ -133,9 +134,9 @@
       const urlParams = new URLSearchParams(window.location.search);
       const file = urlParams.get('file');
       if(file){
-        iframe.setAttribute("src",'https://app-v2.proofeasy.io/final_doc/'+file+'?type=iframe');
+        iframe.setAttribute("src",'https://app.proofeasy.io/final_doc/'+file+'?type=iframe');
       }
     </script>
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"d96f411f003549f987f919166529f439","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"d96f411f003549f987f919166529f439","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>

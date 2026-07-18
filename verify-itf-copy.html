@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Document Verification</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <style>
+    nav {
+      background: #16120f;
+    }
+    footer {
+      padding:60px 0px;
+      background: #16120f;
+    }
+    .container-section {
+      width:100%;
+      max-width:1200px;
+      padding:0px 15px;
+      margin:0px auto;
+    }
+    .row-sec {
+      flex-shrink: 0;
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .col-6 {
+      flex: 0 0 auto;
+      width: 50%;
+    }
+    .col-12 {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+    .social-link ul {
+      float:right;
+      padding:0px;
+      margin:0px;
+    }
+    .social-link ul li {
+      display:inline-block;
+    }
+    .social-link ul li a {
+      border: 2px solid #d4d4d4;
+      transition: color 0.3s ease,background-color 0.3s ease,border-color 0.3s ease;
+      color: #929292;
+      background-color: transparent;
+      margin: 0 11px 0 0;
+      width: 38px;
+      height: 38px;
+      line-height: 38px;
+      border-radius: 2px;
+      display: block;
+      text-align: center;
+    }
+    .social-link ul li a:hover {
+      border-color: #d72323;
+      background-color: #d72323;
+      color:#fff;
+    }
+    .footer-logo {
+      margin:0px auto;
+      text-align:center;
+    }
+    .footer-link > ul > li > a {
+      padding: 0.4em 27px;
+      display: inline-block;
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-size: 18px;
+      color: #929292 !important;
+      text-decoration: none;
+      font-family: sans-serif;
+    }
+    .footer-link ul {
+      padding: 0px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .footer-link ul li {
+      display:inline-block;
+    }
+    .copy-txt {
+      margin-top:80px;
+      font-size:14px;
+      color: #929292;
+      font-family: sans-serif;
+      text-align:center;
+    }
+    .content {
+      width: 100%;
+      height: auto;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    h1 {
+      font-family: 'Arial', sans-serif;
+      font-size: 22px;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 0px;
+    }
+    h2 {
+      font-family: 'Arial', sans-serif;
+      font-size: 16px;
+      color: #fff;
+      margin-top: 5px;
+    }
+    /* Base layout cleanup */
+    body {
+      margin: 0;
+    }
+    nav.navbar {
+      display: flex;
+      align-items: stretch;
+      gap: 16px;
+    }
+    .logo {
+      height: 100px;
+      padding: 15px 50px;
+      max-width: 100%;
+      max-height: 70px;
+    }
+
+    /* Iframe defaults; JS will resize when possible */
+    .doc-frame {
+      width: 100%;
+      border: none;
+      height: 2700px
+    }
+
+    /* Tablet (portrait & small landscape) */
+    @media (max-width: 1024px) {
+      .logo {
+        padding: 12px 24px;
+        max-height: 70px;
+      }
+      h1 { font-size: 20px; }
+      h2 { font-size: 15px; }
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      nav.navbar {
+        flex-direction: row;
+        align-items: stretch;
+        text-align: left;
+      }
+      .logo {
+        padding: 10px 15px;
+        max-height: 50px;
+      }
+      
+      h1 { font-size: 14px; }
+      h2 { font-size: 10px; }
+      .doc-frame {
+        height: 2700px
+      }
+    }
+
+    /* Mobile iPhone SE*/
+    @media (max-width: 375px) {
+      h1 { font-size: 12px; }
+      h2 { font-size: 8px; }
+    }
+
+    @media(max-width:767px) {
+      .social-link ul {
+        float: none;
+        margin: 0px auto;
+        text-align: center;
+      }
+      .col-6 {
+        flex: 0 0 auto;
+        width: 100%;
+      }
+    }
+  </style>
+  <body>
+    <!-- HEADER -->  
+    <header style="padding:10px 0px; background:#16120f;">
+      <div class="container-section">
+        <div class="row-sec">
+          <div class="col-6">
+            <a href="https://www.mytkd.org/" target="_blank">
+              <img src="https://www.mytkd.org/wp-content/uploads/2020/10/cropped-MTF-White-Text-Logo-1.png" style="height:80px;width:auto;">
+            </a>
+          </div>
+          <div class="col-6">
+            <div class="social-link">
+              <ul>
+                <li><a href="https://www.facebook.com/malaysiantkd" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/malaysiantkd/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/@malaysiantkd" target="_blank"><i class="fa fa-youtube"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- MIDDLE CONTENT -->  
+    <iframe id="iframeCode" class="doc-frame" src="https://app.proofeasy.io/final_doc/944ea690-8aa3-4b24-981c-926684fadb94.pdf?type=iframe" scrolling="no" allow="clipboard-write"></iframe>
+    <script>
+      const iframe = document.getElementById("iframeCode");
+      let resizedByMessage = false;
+      // Listen event message from iframe
+      window.addEventListener("message", function(event) {
+        // For security, filter message origin
+        if (event.origin !== "https://app.proofeasy.io") return;
+
+        if (event.data.iframeHeight) {
+          console.log('height from content of iframe', event.data.iframeHeight);
+          iframe.style.height = event.data.iframeHeight + "px";
+          resizedByMessage = true;
+        }
+      });
+      // Fallback: if no resize message, use default height
+      iframe.addEventListener("load", function() {
+        setTimeout(() => {
+          if (!resizedByMessage) {
+            iframe.style.height = "2700px"; // fallback
+          }
+        }, 2000);
+      });
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const file = urlParams.get('file');
+      if(file){
+        iframe.setAttribute("src",'https://app.proofeasy.io/final_doc/'+file+'?type=iframe');
+      }
+    </script>
+    <footer>
+      <div class="container-section">
+        <div class="row-sec">
+          <div class="col-12">
+            <div class="footer-logo"><a href="https://www.mytkd.org/" target="_blank"><img src="https://www.mytkd.org/wp-content/uploads/2018/05/MTF-White-Text-Centred-Logo-e1601860459199.png" style="height:220px;width:auto;"></a></div>
+            <div class="footer-link">
+              <ul>
+                <li><a href="https://www.mytkd.org/" target="_blank">Home</a></li>
+                <li><a href="https://www.mytkd.org/our-coaches/" target="_blank">Our Coaches</a></li>
+                <li><a href="https://www.mytkd.org/contacts/" target="_blank">Contacts</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="copy-txt">
+            Malaysian Taekwon-Do Federation (ITF) © 2020. All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"d96f411f003549f987f919166529f439","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

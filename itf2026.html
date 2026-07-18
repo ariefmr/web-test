@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>ITF 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            /* font-optical-sizing: auto; */
+            /* background: #5b6165; */
+            font-style: normal;
+            display: flex;
+            justify-content: center;
+            /* padding: 20px 0; */
+        }
+
+        .a4-page {
+            width: 210mm;
+            height: 297mm;
+            background-image: url('https://pfe-assets.s3.ap-southeast-1.amazonaws.com/certificate/202604_MTF_Gup_Cert_OL-1.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        /* Helper classes */
+        .inter-bold { font-weight: 700; }
+        .inter-semibold { font-weight: 600; }
+
+        /* Positions */
+        .qr-serial {
+            position: absolute;
+            top: 14mm;
+            right: 5mm;
+            text-align: center;
+            width: 50mm;
+        }
+
+        .qr-serial img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .qr-serial .serial {
+            font-size: 16px;
+            margin-top: 2px;
+        }
+
+        .name-section {
+            position: absolute;
+            top: 98mm; 
+            left: 15mm;
+            width: 100%;
+            text-align: center;
+        }
+
+        .name-section span {
+            font-size: 32px;
+        }
+
+        .grade-from {
+            position: absolute;
+            top: 148mm;
+            right: 25mm;
+            font-size: 18px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .grade-to {
+            position: absolute;
+            top: 148mm;
+            left: 55mm;
+            font-size: 18px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .date-item-tarikh {
+            position: absolute;
+            top: 217mm;
+            right: 40mm;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .date-item-bulan {
+            position: absolute;
+            top: 217mm;
+            left: 10mm;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .date-item-tahun {
+            position: absolute;
+            top: 217mm;
+            left: 80mm;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .signature-section {
+            position: absolute;
+            bottom: 26mm; /* Dinaikkan lagi */
+            left: 45mm;
+            text-align: center;
+            /* width: 90mm; */
+            line-height: 1.1;
+        }
+
+        .signature-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1mm;
+        }
+
+        .signature-section img {
+            max-height: 20mm;
+            margin-bottom: 5px;
+        }
+
+        .signature-section .name-line {
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="a4-page">
+        <!-- QR & Serial -->
+        <div class="qr-serial">
+            <img src="{{ $barcode }}" />
+            <!-- <img src="https://app.proofeasy.io/proxy/image/dXBsb2Fkcy9McmRHTVE1MzM5MS5wbmc=?uid=413" alt="QR Code" /> -->
+
+            <div class="serial">
+                <span>{{ $certificate_number }}</span>
+            </div>
+        </div>
+
+        <!-- Name -->
+        <div class="name-section">
+            <span class="inter-bold">{{ $name }}</span>
+        </div>
+
+        <!-- Grades -->
+        <div class="grade-from inter-semibold">{{ $grade_from }}</div>
+        <div class="grade-to inter-semibold">{{ $grade_to }}</div>
+        <!-- <div class="grade-from inter-semibold">3rd Gup</div>
+        <div class="grade-to inter-semibold">4rd Gup</div> -->
+
+        <!-- Date, Month, Year -->
+        <div class="date-item-tarikh inter-semibold">{{ $date }}</div>
+        <div class="date-item-bulan inter-semibold">{{ $month }}</div>
+        <div class="date-item-tahun inter-semibold">{{ $year }}</div>
+        <!-- <div class="date-item-tarikh inter-semibold">15</div>
+        <div class="date-item-bulan inter-semibold">October</div>
+        <div class="date-item-tahun inter-semibold">2025</div> -->
+
+        <!-- Signature -->
+        <div class="signature-section">
+            <img src="{{ $examiner_signature_url }}" />
+            <!-- <img src="https://pfe-assets.s3.ap-southeast-1.amazonaws.com/certificate/yong-sg-rm.png" /> -->
+            <div class="signature-text">
+                <div class="name-line inter-bold">{{ $examiner_title }} &nbsp; {{ $examiner_name }}</div>
+                <div class="name-line inter-bold">{{ $state_association_name }}</div>
+                <div class="name-line inter-bold">{{ $examiner_grade }}</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
