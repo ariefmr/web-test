@@ -18,7 +18,7 @@
 
         body {
             font-family: "Inter", sans-serif;
-            /* font-optical-sizing: auto; */
+            font-optical-sizing: auto;
             /* background: #5b6165; */
             font-style: normal;
             display: flex;
@@ -45,19 +45,19 @@
         /* Positions */
         .qr-serial {
             position: absolute;
-            top: 14mm;
-            right: 5mm;
+            top: 10mm;
+            left: 82mm;
             text-align: center;
-            width: 50mm;
+            width: 100%;
         }
 
         .qr-serial img {
-            width: 80px;
-            height: 80px;
+            width: 94px;
+            height: 94px;
         }
 
         .qr-serial .serial {
-            font-size: 16px;
+            font-size: 14px;
             margin-top: 2px;
         }
 
@@ -70,7 +70,7 @@
         }
 
         .name-section span {
-            font-size: 32px;
+            font-size: 30px;
         }
 
         .grade-from {
@@ -93,7 +93,7 @@
 
         .date-item-tarikh {
             position: absolute;
-            top: 217mm;
+            top: 218mm;
             right: 40mm;
             width: 100%;
             text-align: center;
@@ -102,7 +102,7 @@
 
         .date-item-bulan {
             position: absolute;
-            top: 217mm;
+            top: 218mm;
             left: 10mm;
             width: 100%;
             text-align: center;
@@ -111,7 +111,7 @@
 
         .date-item-tahun {
             position: absolute;
-            top: 217mm;
+            top: 218mm;
             left: 80mm;
             width: 100%;
             text-align: center;
@@ -121,9 +121,9 @@
         .signature-section {
             position: absolute;
             bottom: 26mm; /* Dinaikkan lagi */
-            left: 45mm;
+            right: 26mm;
             text-align: center;
-            /* width: 90mm; */
+            width: 100%;
             line-height: 1.1;
         }
 
@@ -151,11 +151,12 @@
     <div class="a4-page">
         <!-- QR & Serial -->
         <div class="qr-serial">
-            <!-- <img src="{{ $barcode }}" /> -->
-            <img src="https://app.proofeasy.io/proxy/image/dXBsb2Fkcy9McmRHTVE1MzM5MS5wbmc=?uid=413" alt="QR Code" />
+            <img src="{{ $barcode }}"/>
+            <!-- <img src="https://app.proofeasy.io/proxy/image/dXBsb2Fkcy9XUldjSUc2NTY3OC5wbmc=?uid=195" /> -->
 
             <div class="serial">
                 <span>{{ $certificate_number }}</span>
+                <!-- <span>D-V-6893</span> -->
             </div>
         </div>
 
@@ -167,25 +168,28 @@
         <!-- Grades -->
         <div class="grade-from inter-semibold">{{ $grade_from }}</div>
         <div class="grade-to inter-semibold">{{ $grade_to }}</div>
-        <!-- <div class="grade-from inter-semibold">3rd Gup</div>
-        <div class="grade-to inter-semibold">4rd Gup</div> -->
+        <!-- <div class="grade-from inter-semibold">1st Dan</div>
+        <div class="grade-to inter-semibold">2nd Dan</div> -->
 
         <!-- Date, Month, Year -->
         <div class="date-item-tarikh inter-semibold">{{ $date }}</div>
         <div class="date-item-bulan inter-semibold">{{ $month }}</div>
         <div class="date-item-tahun inter-semibold">{{ $year }}</div>
-        <!-- <div class="date-item-tarikh inter-semibold">15</div>
-        <div class="date-item-bulan inter-semibold">October</div>
+        <!-- <div class="date-item-tarikh inter-semibold">20</div>
+        <div class="date-item-bulan inter-semibold">Oktober</div>
         <div class="date-item-tahun inter-semibold">2025</div> -->
 
         <!-- Signature -->
         <div class="signature-section">
-            <!-- <img src="{{ $examiner_signature_url }}" /> -->
-            <img src="https://pfe-assets.s3.ap-southeast-1.amazonaws.com/certificate/yong-sg-rm.png" />
+            <img src="{{ $examiner_signature_url }}" />
+            <!-- <img src="https://pfe-assets.s3.ap-southeast-1.amazonaws.com/certificate/yong-sg-rm.png" /> -->
             <div class="signature-text">
-                <div class="name-line inter-bold">{{ $examiner_title }} &nbsp; {{ $examiner_name }}</div>
+                <div class="name-line inter-bold">{{ $examiner_title }} {{ $examiner_name }}</div>
                 <div class="name-line inter-bold">{{ $state_association_name }}</div>
                 <div class="name-line inter-bold">{{ $examiner_grade }}</div>
+                <!-- <div class="name-line inter-bold">Grand Master Balachandran Sangakaranayar</div>
+                <div class="name-line inter-bold">Malaysia Taekwondo Federation</div>
+                <div class="name-line inter-bold">8th Kup</div> -->
             </div>
         </div>
     </div>

@@ -106,14 +106,14 @@
       </div>
     </header>
     <!-- MIDDLE CONTENT -->  
-    <iframe id="iframeCode" class="doc-frame" src="https://app-v2.proofeasy.io/final_doc/944ea690-8aa3-4b24-981c-926684fadb94.pdf?type=iframe" scrolling="no" allow="clipboard-write"></iframe>
+    <iframe id="iframeCode" class="doc-frame" src="https://app.proofeasy.io/final_doc/944ea690-8aa3-4b24-981c-926684fadb94.pdf?type=iframe" scrolling="no" allow="clipboard-write"></iframe>
     <script>
       const iframe = document.getElementById("iframeCode");
       let resizedByMessage = false;
       // Listen event message from iframe
       window.addEventListener("message", function(event) {
         // For security, filter message origin
-        if (event.origin !== "https://app-v2.proofeasy.io") return;
+        if (event.origin !== "https://app.proofeasy.io") return;
 
         if (event.data.iframeHeight) {
           console.log('height from content of iframe', event.data.iframeHeight);
@@ -133,7 +133,7 @@
       const urlParams = new URLSearchParams(window.location.search);
       const file = urlParams.get('file');
       if(file){
-        iframe.setAttribute("src",'https://app-v2.proofeasy.io/final_doc/'+file+'?type=iframe');
+        iframe.setAttribute("src",'https://app.proofeasy.io/final_doc/'+file+'?type=iframe');
       }
     </script>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"d96f411f003549f987f919166529f439","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
