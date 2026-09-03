@@ -83,7 +83,7 @@
     .doc-frame {
       width: 100%;
       border: none;
-      height: 2700px
+      height: 1200px
     }
 
     /* Tablet (portrait & small landscape) */
@@ -119,6 +119,24 @@
     @media (max-width: 375px) {
       h1 { font-size: 12px; }
       h2 { font-size: 8px; }
+    }
+    footer {
+      background: #000;
+      color: #fff;
+      padding: 16px 50px;
+    }
+    .footer-content {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .footer-logo {
+      max-height: 40px;
+      width: auto;
+    }
+    .footer-text {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
     }
   </style>
   <body>
@@ -166,5 +184,11 @@
       }
     </script>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"d96f411f003549f987f919166529f439","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<footer>
+  <div class="footer-content">
+    <img loading="lazy" src="https://app.proofeasy.io/staticpages/assets/credential/image/Final-Logo-White.webp" alt="ProofEasy logo" class="footer-logo">
+    <span class="footer-text">Secured by ProofEasy's Blockchain Verification</span>
+  </div>
+</footer>
 </body>
 </html>
