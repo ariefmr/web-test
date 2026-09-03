@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* @page {
+            margin: 0px;
+        } */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Roboto", sans-serif;
+            font-size: 20px;
+            line-height: 1.4;
+            color: #333;
+            /* background: #5b6165; */
+            display: flex;
+            justify-content: center;
+            /* padding: 20px 0; */
+        }
+        .ra4-page {
+            width: 215mm;
+            height: 305mm;
+            padding: 10mm;
+            background-color: #16212c;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .container {
+            flex-grow: 1;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ra4-page">
+      <div class="container">
+        <div class="main-section"
+            style="
+            width: 95%;
+            height: 95%;
+            background-color: #fff;
+            border: 1px solid #fff;
+            margin: 0 auto;
+            padding: 0 40px 10px 40px;
+            position: relative;
+            top: -35px;
+        ">
+            <div class="header" style="margin-bottom: 20px;margin-top:20px;margin-left:-20px;padding:20px 0 5px 0;">
+                <img style="width: 50%" src="https://pfe-assets.s3.ap-southeast-1.amazonaws.com/certificate/eship-header-final_v1.png" />
+                <!-- <img src="https://pfe-assets.s3.ap-southeast-1.amazonaws.com/certificate/eship_header.png" /> -->
+            </div>
+            <div
+                style="
+            color: black;
+            border: 1px solid #fff;
+            position: inherit;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding:10px 20px 20px 20px;
+            ">
+                <span style="margin-left: 10px;">THIS IS TO CERTIFY THAT</span>
+            </div>
+            <div
+                style="
+            color: black;
+            border: 1px solid #fff;
+            position: inherit;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 300;
+            font-size: 26px;
+            padding-top:4px;
+            padding-bottom:5px;
+            padding-right:20px;
+            padding-left:30px;
+            ">
+                <strong>
+                    {{$name}}
+                </strong>
+            </div>
+
+            <div
+                style="
+            color: black;
+            border: 1px solid #fff;
+            position: inherit;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding-top:20px;
+            padding-bottom:20px;
+            padding-right:20px;
+            padding-left:30px;
+            ">
+                <!-- HAS COMPLETED THE TRAINING TO BE AN -->
+                IS A
+            </div>
+
+            <div
+                style="
+            color: black;
+            border: 1px solid #fff;
+            position: inherit;
+            padding-left:30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 400;
+            font-size: 30px;
+            ">
+                <strong>
+                        ESHIP: Navigating Uncertainty<span style="font-size: 22px !important;position:absolute;top:1px !important;">TM</span> 
+                        <!-- Foundation - Academic Trainer -->
+                        <br/>{{$organizer}}
+                </strong>
+            </div>
+
+            <div
+                style="
+            color: black;
+            border: 1px solid #fff;
+            position: inherit;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding-top:20px;
+            padding-bottom:20px;
+            padding-right:20px;
+            padding-left:30px;
+            ">
+                <!-- with Foundational knowledge of Theory and Concepts, Game mechanics, and
+                Game facilitation in an Academic context. -->
+                {{$description}}
+            </div>
+
+            <div
+                style="
+            color: black;
+            position: inherit;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding:20px;
+            width: 100%;
+            ">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 80%; vertical-align: top; line-height: 25px">
+                            <table style="width: 100%">
+                                <tr>
+                                    <td>
+                                        DATE<br />
+                                        <!-- 25 October 2023 -->
+                                        {{$date}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        CERTIFICATE NUMBER <br />
+                                        <!-- ESP-00011-7277 -->
+                                        {{$serial_number}}-7277
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="vertical-align: top;text-align:right;;">
+                            <!-- <img style="width: 120px; height: 120px;margin-right:20px;" src="https://pfe-assets.s3.ap-southeast-1.amazonaws.com/certificate/sample-qr.png" /> -->
+                            <img style="width: 120px; height: 120px;margin-right:20px;" src="{{$barcode}}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="width: 100%">
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="width: 100%">
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="width: 100%">
+                            <img style="width: 40%"
+                                src="https://pfe-assets.s3.ap-southeast-1.amazonaws.com/certificate/eship_signature_v2.png" /><br />
+                            Rajiv Vaid Basaiawmoit<br />
+                            Innovation Director
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <!-- <img style="width: 70%;z-index:99; text-align:center;"
+                src="https://pfe-assets.s3.ap-southeast-1.amazonaws.com/certificate/eship_footer.png" /> -->
+            <div style="margin-top: auto; position:absolute; bottom:-100px; left:130px" >
+              <img style="width: 450px; display: block;" 
+                    src="https://pfe-assets.s3.ap-southeast-1.amazonaws.com/certificate/eship_footer.png" />
+          </div>
+        </div>
+      </div >
+    </div >
+    
+
+</body>
+
+</html>
